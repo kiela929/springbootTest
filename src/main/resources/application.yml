@@ -1,0 +1,31 @@
+server.port: 8081
+
+spring :
+  datasource:
+    mssql:
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      jdbc-url: jdbc:sqlserver://10.0.0.3:1433;database=db_erp;encrypt=true;trustServerCertificate=true
+      username: erp
+      password: dpelzhWkd
+    mysql:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://10.0.0.4:3306/db_www?serverTimezone=Asia/Seoul
+      username: sweet
+      password: dpelzhWkd
+
+  jpa :
+    show-sql : true
+#    database: mysql
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        format-sql: true
+
+
+  logging:
+    level:
+      org.hibernate.type: debug
+      org.hibernate.SQL : debug
+      org.hibernate.type.descriptor.sql: debug
+
+
